@@ -74,6 +74,7 @@ obj-$(CONFIG_RT_REGMAP) += rt-regmap.o
 obj-$(CONFIG_USB_EXT_TYPE_C_PERICOM)	+= type-c-pericom.o
 obj-$(CONFIG_USB_EXT_TYPE_C_TI)		+= type-c-ti.o
 obj-$(CONFIG_QPNP_MISC) 	+= qpnp-misc.o
+obj-$(CONFIG_FORCE_FAST_CHARGE)		+= fastcharge/
 
 obj-$(CONFIG_HTC_FLASHLIGHT) += htc_flashlight.o
 obj-$(CONFIG_HTC_MCUROUTE) += htc_mcuroute.o
