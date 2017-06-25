@@ -33,13 +33,7 @@ void workqueue_show_pending_work(void);
  * 1. sched_clock is not irq safe
  * 2. 32 bit: overflows every 4,294,967,296 msecs
  */
-static inline unsigned long htc_debug_get_sched_clock_ms(void)
-{
-	unsigned long long timestamp;
-	timestamp = sched_clock();
-	do_div(timestamp, NSEC_PER_MSEC);
-	return ((unsigned long) timestamp);
-}
+unsigned long htc_debug_get_sched_clock_ms(void);
 
 #if defined(CONFIG_HTC_DEBUG_BOOTLOADER_LOG)
 ssize_t bldr_log_read_once(char __user *userbuf, ssize_t klog_size);
