@@ -1236,10 +1236,11 @@ enum Tfa98xx_Error tfa_dsp_msg_status(Tfa98xx_handle_t handle, int *pRpcStatus) 
 	return error;
 }
 
+static char latest_errorstr[64];
+
 const char* tfa98xx_get_i2c_status_id_string(int status)
 {
         const char* p_id_str;
-        char latest_errorstr[64];
 
         switch (status)
         {
@@ -2808,7 +2809,6 @@ enum tfa_error tfa_reset(void)
 const char* Tfa98xx_GetErrorString(enum Tfa98xx_Error error)
 {
 	const char* pErrStr;
-	char latest_errorstr[64];
 
 	switch (error)
 	{
